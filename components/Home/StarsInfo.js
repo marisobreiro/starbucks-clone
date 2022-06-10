@@ -1,6 +1,7 @@
-import  { StyleSheet, Text, View } from 'react-native';
+import  { Button, StyleSheet, Text, View } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 import Colors from '../../constants/Colors';
+import DefaultButton from '../UI/DefaultButton';
 
 export default function StarsInfo() {
     return (
@@ -12,24 +13,43 @@ export default function StarsInfo() {
             <Text style={styles.starsSubtitle}>Saldo de estrelas</Text>
             <View style={styles.starsProgress}>
                 <View style={styles.starsBar}></View>
-                <View style={styles.starCircle}></View>
+                <View style={styles.starContainer}>
+                    <View style={styles.starCircle}></View>
+                    <Text>15</Text>
+                </View>
                 <View style={styles.starsBar}></View>
                 <View style={styles.starsBar}></View>
-                <View style={styles.starCircle}></View>
+                <View style={styles.starContainer}>
+                    <View style={styles.starCircle}></View>
+                    <Text>30</Text>
+                </View>
                 <View style={styles.starsBar}></View>
                 <View style={styles.starsBar}></View>
-                <View style={styles.starCircle}></View>
+                <View style={styles.starContainer}>
+                    <View style={styles.starCircle}></View>
+                    <Text>45</Text>
+                </View>
                 <View style={styles.starsBar}></View>
                 <View style={styles.starsBar}></View>
-                <View style={styles.starCircle}></View>
+                <View style={styles.starContainer}>
+                    <View style={styles.starCircle}></View>
+                    <Text>70</Text>
+                </View>
                 <View style={styles.starsBar}></View>
                 <View style={styles.starsBar}></View>
-                <View style={styles.starCircle}></View>
+                <View style={styles.starContainer}>
+                    <View style={styles.starCircle}></View>
+                    <Text>150</Text>
+                </View>
                 <View style={styles.starsBar}></View>
                 <View style={styles.starsBarDis}></View>
-                <View style={styles.starsCircleDis}></View>
+                <View style={styles.starContainer}>
+                    <View style={styles.starCircle}></View>
+                    <Text>300</Text>
+                </View>
                 <View style={styles.starsBarDis}></View>
             </View>
+            <DefaultButton btnTitle="Detalhes" />
         </View>
     )
 }
@@ -38,8 +58,10 @@ const styles = StyleSheet.create({
     container: {
         paddingVertical: 30,
         paddingHorizontal: 16,
-        // backgroundColor: '#F1F1F1F1',
-        height: 300
+        backgroundColor: '#F7F7F7',
+        height: 'auto',
+        borderBottomColor: '#ccc',
+        borderBottomWidth: 1
     },
     starsTotal: {
         alignItems: 'center',
@@ -58,7 +80,9 @@ const styles = StyleSheet.create({
     starsProgress: {
         alignItems: 'center',
         flexDirection: 'row',
-        marginVertical: 40
+        justifyContent: 'center',
+        marginVertical: 45,
+        width: '100%'
     },
     starsBar: {
         borderTopColor: Colors.stars,
@@ -68,8 +92,9 @@ const styles = StyleSheet.create({
     starCircle: {
         backgroundColor: Colors.stars,
         borderRadius: 40,
-        width: 20,
-        height: 20
+        width: 15,
+        height: 15,
+        marginBottom: 8
     },
     starsBarDis: {
         borderTopColor: '#AAAAAA',
@@ -80,7 +105,12 @@ const styles = StyleSheet.create({
         borderColor: '#AAAAAA',
         borderWidth: 3,
         borderRadius: 40,
-        width: 20,
-        height: 20
+        width: 15,
+        height: 15
+    },
+    starContainer: {
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: 18
     }
 })

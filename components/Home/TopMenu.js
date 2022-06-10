@@ -18,15 +18,10 @@ export default function TopMenu() {
 
 const styles = StyleSheet.create({
     menu: {
-        elevation: 10,
         flexDirection: 'row',
         width: 600,
         height: 50,
-        paddingHorizontal: 16,
-        shadowColor: 'black',
-        shadowOffset: {width: 0, height: 5},
-        shadowOpacity: 0.10,
-        backgroundColor: '#FFFFFF',
+        paddingHorizontal: 16
     },
     menuItem: {
         alignItems: 'center',

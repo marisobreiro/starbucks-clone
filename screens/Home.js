@@ -1,16 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+
+import HeaderHome from '../components/Home/HeaderHome';
 import StarsInfo from '../components/Home/StarsInfo';
-import TopMenu from '../components/Home/TopMenu';
-import Title from '../components/UI/Title';
+
 
 export default function Home() {
     return (
         <View style={styles.screen}>
-            <View style={styles.title}>
-                <Title title="Bom dia, Felipe! ☕️" />
-            </View>
-            <TopMenu />
-            <StarsInfo />
+            <HeaderHome />
+            <ScrollView style={styles.scroll}>
+                <StarsInfo />
+            </ScrollView>
         </View>
     )
 }
@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
         paddingTop: 50,
         // paddingHorizontal: 16
     },
-    title: {
-        marginBottom: 50
+    scroll: {
     }
 })
