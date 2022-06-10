@@ -6,6 +6,7 @@ export default function Title({ title }) {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 30
+        fontSize: 26,
+        paddingHorizontal: 16
     }
 })

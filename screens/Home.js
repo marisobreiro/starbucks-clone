@@ -1,14 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Title from '../components/ui/Title';
+import StarsInfo from '../components/Home/StarsInfo';
+import TopMenu from '../components/Home/TopMenu';
+import Title from '../components/UI/Title';
 
 export default function Home() {
     return (
         <View style={styles.screen}>
-            <Title title="Bom dia, Felipe! ☕️" />
-            <View style={styles.menuContainer}>
-                <Text style={styles.menuText}>Mensagens</Text>
-                <Text style={styles.menuText}>Histórico</Text>
+            <View style={styles.title}>
+                <Title title="Bom dia, Felipe! ☕️" />
             </View>
+            <TopMenu />
+            <StarsInfo />
         </View>
     )
 }
@@ -16,13 +18,9 @@ export default function Home() {
 const styles = StyleSheet.create({
     screen: {
         paddingTop: 50,
-        paddingHorizontal: 16
+        // paddingHorizontal: 16
     },
-    menuContainer: {
-        flexDirection: 'row',
-        marginTop: 50
-    },
-    menuText: {
-        marginRight: 8
+    title: {
+        marginBottom: 50
     }
 })
