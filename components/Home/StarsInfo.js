@@ -1,5 +1,6 @@
-import  { Button, StyleSheet, Text, View } from 'react-native';
+import  {StyleSheet, Text, View } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome'
+
 import Colors from '../../constants/Colors';
 import DefaultButton from '../UI/DefaultButton';
 
@@ -44,7 +45,7 @@ export default function StarsInfo() {
                 <View style={styles.starsBar}></View>
                 <View style={styles.starsBarDis}></View>
                 <View style={styles.starContainer}>
-                    <View style={styles.starCircle}></View>
+                    <View style={styles.starsCircleDis}></View>
                     <Text>300</Text>
                 </View>
                 <View style={styles.starsBarDis}></View>
@@ -106,7 +107,8 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         borderRadius: 40,
         width: 15,
-        height: 15
+        height: 15,
+        marginBottom: 8
     },
     starContainer: {
         alignItems: 'center',

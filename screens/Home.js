@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet, View } from 'react-native';
 
-import HeaderHome from '../components/Home/HeaderHome';
+import HeaderHome from '../components/Home/Header/HeaderHome';
+import ItemShop from '../components/Home/Main/ItemShop';
 import StarsInfo from '../components/Home/StarsInfo';
 
 
@@ -10,6 +11,7 @@ export default function Home() {
             <HeaderHome />
             <ScrollView style={styles.scroll}>
                 <StarsInfo />
+                <ItemShop />
             </ScrollView>
         </View>
     )

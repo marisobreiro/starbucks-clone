@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 
-import Title from '../UI/Title';
+import Title from '../../UI/Title';
 import TopMenu from './TopMenu';
 
 export default function HeaderHome() {
