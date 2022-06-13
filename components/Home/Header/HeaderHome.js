@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0, height: 3},
         shadowOpacity: 0.10,
         backgroundColor: '#FFFFFF',
-        zIndex: 1
+        zIndex: 1,
+        paddingTop: 100
     },
     title: {
         marginBottom: 50

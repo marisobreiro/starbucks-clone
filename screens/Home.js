@@ -1,27 +1,25 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 
 import HeaderHome from '../components/Home/Header/HeaderHome';
+import Cards from '../components/Home/Main/Cards';
 import ItemShop from '../components/Home/Main/ItemShop';
-import StarsInfo from '../components/Home/StarsInfo';
-
+import StarsInfo from '../components/Home/Main/StarsInfo';
 
 export default function Home() {
     return (
-        <View style={styles.screen}>
+        <View style={styles.container}>
             <HeaderHome />
-            <ScrollView style={styles.scroll}>
+            <ScrollView >
                 <StarsInfo />
                 <ItemShop />
+                <Cards />
             </ScrollView>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    screen: {
-        paddingTop: 50,
-        // paddingHorizontal: 16
-    },
-    scroll: {
+    container: {
+        flex: 1
     }
 })

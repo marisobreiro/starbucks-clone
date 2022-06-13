@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, View, Text } from 'react-native';
+import { Image, ScrollView, StyleSheet, View, Text } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 import Colors from '../../../constants/Colors';
@@ -13,25 +13,74 @@ export default function ItemShop() {
                     <View style={styles.icon}>
                         <FontAwesome name="plus" size={10} color="#FFF"/>
                     </View>
-                    <View style={styles.itemContainer}></View>
+                    <View style={styles.itemContainer}>
+                        <Image 
+                            source={require('../../../assets/images/minipao.png')}
+                            style={styles.image} />
+                    </View>
+                    <Text style={styles.label}> Mini Pão de Queijo</Text>
                 </View>
+
                 <View style={ styles.item}>
                     <View style={styles.icon}>
                         <FontAwesome name="plus" size={10} color="#FFF"/>
                     </View>
-                    <View style={styles.itemContainer}></View>
+                    <View style={styles.itemContainer}>
+                        <Image 
+                            source={require('../../../assets/images/paoqueijo.png')} 
+                            style={styles.image} />
+                    </View>
+                    <Text style={styles.label}>Pão de Queijo</Text>
                 </View>
+
+                <View style={styles.item}>
+                    <View>
+                        <View style={styles.icon}>
+                            <FontAwesome name="plus" size={10} color="#FFF"/>
+                        </View>
+                        <View style={styles.itemContainer}>
+                        <Image 
+                                source={require('../../../assets/images/frapbrigadeiro.png')} 
+                                style={styles.image} />
+                        </View>
+                    </View>
+                    <Text style={styles.label}>Frapuccino Brigadeiro</Text>
+                </View>
+
                 <View style={ styles.item}>
                     <View style={styles.icon}>
                         <FontAwesome name="plus" size={10} color="#FFF"/>
                     </View>
-                    <View style={styles.itemContainer}></View>
+                    <View style={styles.itemContainer}>
+                        <Image 
+                            source={require('../../../assets/images/cookie.png')} 
+                            style={styles.imageReduce} />
+                    </View>
+                    <Text style={styles.label}>Cookie de Baunilia</Text>
                 </View>
+
                 <View style={ styles.item}>
                     <View style={styles.icon}>
                         <FontAwesome name="plus" size={10} color="#FFF"/>
                     </View>
-                    <View style={styles.itemContainer}></View>
+                    <View style={styles.itemContainer}>
+                        <Image 
+                            source={require('../../../assets/images/croque.png')} 
+                            style={styles.imageReduce} />
+                    </View>
+                    <Text style={styles.label}>Croque Monsieur</Text>
+                </View>
+
+                <View style={ styles.item}>
+                    <View style={styles.icon}>
+                        <FontAwesome name="plus" size={10} color="#FFF"/>
+                    </View>
+                    <View style={styles.itemContainer}>
+                        <Image 
+                            source={require('../../../assets/images/caramelomachiato.png')} 
+                            style={styles.image} />
+                    </View>
+                    <Text style={styles.label}>Caramelo Macchiato Gelado</Text>
                 </View>
             </ScrollView>
         </View>
@@ -40,7 +89,15 @@ export default function ItemShop() {
 
 const styles = StyleSheet.create({
     section: {
-        paddingHorizontal: 16
+        backgroundColor: '#FFF',
+        elevation: 1,
+        marginBottom: 20,
+        paddingBottom: 8,
+        paddingHorizontal: 16,
+        shadowColor: 'black',
+        shadowOffset: {width: 0, height: 3},
+        shadowOpacity: 0.10,
+        zIndex: 1
     },
     title: {
         color: Colors.secondary,
@@ -63,7 +120,6 @@ const styles = StyleSheet.create({
         zIndex: -1
     },
     icon: {
-        alignItems: 'center',
         backgroundColor: Colors.main,
         borderRadius: 50,
         height: 20,
@@ -74,5 +130,22 @@ const styles = StyleSheet.create({
     },
     item: {
         margin: 10,
+        width: 100
+    },
+    label: {
+        textAlign: 'center',
+        fontSize: 12,
+        left: -8
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain'
+    },
+    imageReduce: {
+        width: '80%',
+        height: '100%',
+        resizeMode: 'contain',
+        alignSelf: 'center'
     }
 })

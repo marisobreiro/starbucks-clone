@@ -1,8 +1,8 @@
 import  {StyleSheet, Text, View } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 
-import Colors from '../../constants/Colors';
-import DefaultButton from '../UI/DefaultButton';
+import Colors from '../../../constants/Colors';
+import DefaultButton from '../../UI/DefaultButton';
 
 export default function StarsInfo() {
     return (

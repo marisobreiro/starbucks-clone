@@ -1,24 +1,51 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { StyleSheet } from 'react-native';
+import Iconicons from '@expo/vector-icons/Ionicons';
 
 import Home from './screens/Home';
+import Colors from './constants/Colors';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer style={styles.container}>
-        {/* <View>
-            <Home />
-        </View> */}
-        <Tab.Navigator>
-            <Tab.Screen name="Início" component={ Home } />
+        <Tab.Navigator
+            screenOptions={({ route }) => ({
+                tabBarIcon: ({ focused }) => {
+                    let iconName;
+                    let cor;
+
+                    if (route.name == 'Home') {
+                        iconName = focused ? 'ios-home' : 'ios-home-outline';
+                        cor = focused ? Colors.main : '#AAAAAA';
+                    } 
+                    if (route.name == 'Cards') {
+                        iconName = focused ? 'ios-card' : 'ios-card-outline';
+                        cor = focused ? Colors.main : '#AAAAAA';
+                    }
+                    if (route.name == 'Order') {
+                        iconName = focused ? 'cafe' : 'cafe-outline';
+                        cor = focused ? Colors.main : '#AAAAAA';
+                    }
+                    if (route.name == 'Stores') {
+                        iconName = focused ? 'ios-business' : 'ios-business-outline';
+                        cor = focused ? Colors.main : '#AAAAAA';
+                    }
+                    if (route.name == 'Profile') {
+                        iconName = focused ? 'person-circle' : 'person-circle-outline';
+                        cor = focused ? Colors.main : '#AAAAAA';
+                    }
+
+                    return <Iconicons name={iconName} size={20} color={cor} />
+                }
+            })}>
+            <Tab.Screen name='Home' component={ Home } options={{headerShown: false, activeTintColor: Colors.main, inactiveTintColor: '#AAA'}} />
             <Tab.Screen name='Cards' component={ Home } />
-            <Tab.Screen name='Lojas' component={ Home } />
-            <Tab.Screen name='Perfil' component={ Home } />
+            <Tab.Screen name='Order' component={ Home } />
+            <Tab.Screen name='Stores' component={ Home } />
+            <Tab.Screen name='Profile' component={Home} />
         </Tab.Navigator>
     </NavigationContainer>
   );
