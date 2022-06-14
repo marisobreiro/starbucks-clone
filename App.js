@@ -5,6 +5,7 @@ import Iconicons from '@expo/vector-icons/Ionicons';
 
 import Home from './screens/Home';
 import Colors from './constants/Colors';
+import StarbucksCard from './screens/StarbucksCard';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,7 +43,7 @@ export default function App() {
                 }
             })}>
             <Tab.Screen name='Home' component={ Home } options={{headerShown: false, activeTintColor: Colors.main, inactiveTintColor: '#AAA'}} />
-            <Tab.Screen name='Cards' component={ Home } />
+            <Tab.Screen name='Cards' component={ StarbucksCard } />
             <Tab.Screen name='Order' component={ Home } />
             <Tab.Screen name='Stores' component={ Home } />
             <Tab.Screen name='Profile' component={Home} />
