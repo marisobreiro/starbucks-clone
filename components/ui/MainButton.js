@@ -14,11 +14,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: Colors.main,
         borderRadius: 40,
-        padding: 8,
+        padding: 10,
         width: 100,
     },
     buttonText: {
         fontSize: 13,
+        fontWeight: 'bold',
         color: '#FFF'
     }
 })

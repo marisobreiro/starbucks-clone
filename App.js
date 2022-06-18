@@ -8,6 +8,7 @@ import Colors from './constants/Colors';
 import StarbucksCard from './screens/StarbucksCard';
 import Ordering from './screens/Order';
 import Stores from './screens/Stores';
+import Profile from './screens/Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,35 +21,35 @@ export default function App() {
                     let iconName;
                     let cor;
 
-                    if (route.name == 'Home') {
-                        iconName = focused ? 'ios-home' : 'ios-home-outline';
+                    if (route.name == 'Início') {
+                        iconName = 'star'
                         cor = focused ? Colors.main : '#AAAAAA';
                     } 
                     if (route.name == 'Cards') {
                         iconName = focused ? 'ios-card' : 'ios-card-outline';
                         cor = focused ? Colors.main : '#AAAAAA';
                     }
-                    if (route.name == 'Order') {
+                    if (route.name == 'Pedido') {
                         iconName = focused ? 'cafe' : 'cafe-outline';
                         cor = focused ? Colors.main : '#AAAAAA';
                     }
-                    if (route.name == 'Stores') {
+                    if (route.name == 'Lojas') {
                         iconName = focused ? 'ios-business' : 'ios-business-outline';
                         cor = focused ? Colors.main : '#AAAAAA';
                     }
-                    if (route.name == 'Profile') {
+                    if (route.name == 'Perfil') {
                         iconName = focused ? 'person-circle' : 'person-circle-outline';
                         cor = focused ? Colors.main : '#AAAAAA';
                     }
 
-                    return <Iconicons name={iconName} size={20} color={cor} />
+                    return <Iconicons name={iconName} size={30} color={cor} />
                 }
             })}>
-            <Tab.Screen name='Home' component={ Home } options={{headerShown: false, activeTintColor: Colors.main, inactiveTintColor: '#AAA'}} />
+            <Tab.Screen name='Início' component={ Home } options={{headerShown: false, activeTintColor: Colors.main, inactiveTintColor: '#AAA'}} />
             <Tab.Screen name='Cards' component={ StarbucksCard } />
-            <Tab.Screen name='Order' component={ Ordering } />
-            <Tab.Screen name='Stores' component={ Stores } />
-            <Tab.Screen name='Profile' component={Home} />
+            <Tab.Screen name='Pedido' component={ Ordering } />
+            <Tab.Screen name='Lojas' component={ Stores } />
+            <Tab.Screen name='Perfil' component={ Profile } />
         </Tab.Navigator>
     </NavigationContainer>
   );

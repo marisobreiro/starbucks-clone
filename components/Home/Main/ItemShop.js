@@ -11,7 +11,7 @@ export default function ItemShop() {
             <ScrollView style={styles.listItem} horizontal={true}>
                 <View style={ styles.item}>
                     <View style={styles.icon}>
-                        <FontAwesome name="plus" size={10} color="#FFF"/>
+                        <FontAwesome name="plus" size={12} color="#FFF"/>
                     </View>
                     <View style={styles.itemContainer}>
                         <Image 
@@ -23,7 +23,7 @@ export default function ItemShop() {
 
                 <View style={ styles.item}>
                     <View style={styles.icon}>
-                        <FontAwesome name="plus" size={10} color="#FFF"/>
+                        <FontAwesome name="plus" size={12} color="#FFF"/>
                     </View>
                     <View style={styles.itemContainer}>
                         <Image 
@@ -36,7 +36,7 @@ export default function ItemShop() {
                 <View style={styles.item}>
                     <View>
                         <View style={styles.icon}>
-                            <FontAwesome name="plus" size={10} color="#FFF"/>
+                            <FontAwesome name="plus" size={12} color="#FFF"/>
                         </View>
                         <View style={styles.itemContainer}>
                         <Image 
@@ -49,7 +49,7 @@ export default function ItemShop() {
 
                 <View style={ styles.item}>
                     <View style={styles.icon}>
-                        <FontAwesome name="plus" size={10} color="#FFF"/>
+                        <FontAwesome name="plus" size={12} color="#FFF"/>
                     </View>
                     <View style={styles.itemContainer}>
                         <Image 
@@ -61,7 +61,7 @@ export default function ItemShop() {
 
                 <View style={ styles.item}>
                     <View style={styles.icon}>
-                        <FontAwesome name="plus" size={10} color="#FFF"/>
+                        <FontAwesome name="plus" size={12} color="#FFF"/>
                     </View>
                     <View style={styles.itemContainer}>
                         <Image 
@@ -73,7 +73,7 @@ export default function ItemShop() {
 
                 <View style={ styles.item}>
                     <View style={styles.icon}>
-                        <FontAwesome name="plus" size={10} color="#FFF"/>
+                        <FontAwesome name="plus" size={12} color="#FFF"/>
                     </View>
                     <View style={styles.itemContainer}>
                         <Image 
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         zIndex: -1
     },
     icon: {
-        backgroundColor: Colors.main,
+        backgroundColor: Colors.app,
         borderRadius: 50,
         height: 20,
         padding: 5,
