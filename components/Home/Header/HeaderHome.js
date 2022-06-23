@@ -7,7 +7,7 @@ export default function HeaderHome() {
     return (
         <View style={styles.header}>
             <View style={styles.title}>
-                <Title title="Bom dia, Felipe! ☕️" />
+                <Title title="Bom dia, Mariana! ☕️" />
             </View>
             <TopMenu />
         </View>
